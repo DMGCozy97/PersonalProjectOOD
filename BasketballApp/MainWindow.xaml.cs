@@ -97,7 +97,7 @@ namespace BasketballApp
                 
                 standingTbx.Text = selected.Standing.ToString();
                 var uri = new Uri("pack://application:,,,/images/" + selected.TeamImage);
-                imgLogo.Source = new BitmapImage(uri);
+                imgLogo.Source = new BitmapImage(uri);   
             }
         }
     }
