@@ -1,0 +1,21 @@
+﻿<Window x:Class="BasketballApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BasketballApp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <ComboBox x:Name="Conferencecmbx" HorizontalAlignment="Left" Margin="42,31,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="Conferencecmbx_SelectionChanged"/>
+        <ListBox x:Name="Teamslbx" HorizontalAlignment="Left" Height="252" Margin="42,101,0,0" VerticalAlignment="Top" Width="272" Loaded="Teamslbx_Loaded" SelectionChanged="Teamslbx_SelectionChanged"/>
+        <TextBlock x:Name="TeamplayTblk" HorizontalAlignment="Left" Margin="42,53,0,0" TextWrapping="Wrap" Text="Teams &amp; Players" VerticalAlignment="Top" FontSize="22" FontFamily="Kozuka Gothic Pro H"/>
+        <TextBlock x:Name="conferenceTblk" HorizontalAlignment="Left" Margin="42,0,0,0" TextWrapping="Wrap" Text="Conference" VerticalAlignment="Top" FontSize="14" FontFamily="Kozuka Gothic Pro H"/>
+        <Image x:Name="imgLogo" HorizontalAlignment="Left" Height="100" Margin="359,253,0,0" VerticalAlignment="Top" Width="100" Source="/images/lakers.png"/>
+        <TextBlock x:Name="LogoTblk" HorizontalAlignment="Left" Margin="359,204,0,0" TextWrapping="Wrap" Text="Team Logo" VerticalAlignment="Top" FontSize="20" FontFamily="Kozuka Gothic Pro H"/>
+        <TextBlock x:Name="standingTblk" HorizontalAlignment="Left" Margin="501,204,0,0" TextWrapping="Wrap" Text="Standing" VerticalAlignment="Top" FontSize="20" FontFamily="Kozuka Gothic Pro H"/>
+        <TextBlock x:Name="standingTbx" HorizontalAlignment="Left" Margin="504,272,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="37" FontSize="20"/>
+        
+
+    </Grid>
+</Window>
