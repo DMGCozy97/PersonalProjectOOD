@@ -19,6 +19,7 @@ namespace BasketballApp
         public int Standing { get; set; }
         public Conference Conference { get; set; }
 
+        public DateTime GameDay { get; set; }
 
         public string TeamImage { get; set; }
 

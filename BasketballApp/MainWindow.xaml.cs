@@ -22,6 +22,8 @@ namespace BasketballApp
     {
         List<BasketballTeam> allTeams = new List<BasketballTeam>();
         List<BasketballTeam> Conferences = new List<BasketballTeam>();
+        List<BasketballTeam> Games = new List<BasketballTeam>();
+
 
         public MainWindow()
         {
@@ -99,6 +101,21 @@ namespace BasketballApp
                 var uri = new Uri("pack://application:,,,/images/" + selected.TeamImage);
                 imgLogo.Source = new BitmapImage(uri);   
             }
+        }
+
+
+
+        private Random gen = new Random();
+        DateTime RandomDay()
+        {
+                DateTime start = new DateTime(1995, 1, 1);
+                int range = (DateTime.Today - start).Days;
+                return start.AddDays(gen.Next(range));
+          }
+
+        private void lbxGameday_Loaded(object sender, RoutedEventArgs e)
+        {
+            lbxGameday.ItemsSource = RandomDay();
         }
     }
 }

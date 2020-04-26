@@ -7,15 +7,45 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <ComboBox x:Name="Conferencecmbx" HorizontalAlignment="Left" Margin="42,31,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="Conferencecmbx_SelectionChanged"/>
-        <ListBox x:Name="Teamslbx" HorizontalAlignment="Left" Height="252" Margin="42,101,0,0" VerticalAlignment="Top" Width="272" Loaded="Teamslbx_Loaded" SelectionChanged="Teamslbx_SelectionChanged"/>
-        <TextBlock x:Name="TeamplayTblk" HorizontalAlignment="Left" Margin="42,53,0,0" TextWrapping="Wrap" Text="Teams &amp; Players" VerticalAlignment="Top" FontSize="22" FontFamily="Kozuka Gothic Pro H"/>
-        <TextBlock x:Name="conferenceTblk" HorizontalAlignment="Left" Margin="42,0,0,0" TextWrapping="Wrap" Text="Conference" VerticalAlignment="Top" FontSize="14" FontFamily="Kozuka Gothic Pro H"/>
-        <Image x:Name="imgLogo" HorizontalAlignment="Left" Height="100" Margin="359,253,0,0" VerticalAlignment="Top" Width="100" Source="/images/lakers.png"/>
-        <TextBlock x:Name="LogoTblk" HorizontalAlignment="Left" Margin="359,204,0,0" TextWrapping="Wrap" Text="Team Logo" VerticalAlignment="Top" FontSize="20" FontFamily="Kozuka Gothic Pro H"/>
-        <TextBlock x:Name="standingTblk" HorizontalAlignment="Left" Margin="501,204,0,0" TextWrapping="Wrap" Text="Standing" VerticalAlignment="Top" FontSize="20" FontFamily="Kozuka Gothic Pro H"/>
-        <TextBlock x:Name="standingTbx" HorizontalAlignment="Left" Margin="504,272,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="37" FontSize="20"/>
-        
 
+        <TabControl TabStripPlacement="Top">
+
+            <TabItem Header="Home" Width="75">
+                <Grid>
+
+                    <ComboBox x:Name="Conferencecmbx" HorizontalAlignment="Left" Margin="42,31,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="Conferencecmbx_SelectionChanged"/>
+                    <ListBox x:Name="Teamslbx" HorizontalAlignment="Left" Height="252" Margin="42,101,0,0" VerticalAlignment="Top" Width="272" Loaded="Teamslbx_Loaded" SelectionChanged="Teamslbx_SelectionChanged"/>
+                    <TextBlock x:Name="TeamplayTblk" HorizontalAlignment="Left" Margin="42,53,0,0" TextWrapping="Wrap" Text="Teams &amp; Players" VerticalAlignment="Top" FontSize="22" FontFamily="Kozuka Gothic Pro H"/>
+                    <TextBlock x:Name="conferenceTblk" HorizontalAlignment="Left" Margin="42,0,0,0" TextWrapping="Wrap" Text="Conference" VerticalAlignment="Top" FontSize="14" FontFamily="Kozuka Gothic Pro H"/>
+                    <Image x:Name="imgLogo" HorizontalAlignment="Left" Height="100" Margin="359,253,0,0" VerticalAlignment="Top" Width="100" Source="/images/lakers.png"/>
+                    <TextBlock x:Name="LogoTblk" HorizontalAlignment="Left" Margin="359,204,0,0" TextWrapping="Wrap" Text="Team Logo" VerticalAlignment="Top" FontSize="20" FontFamily="Kozuka Gothic Pro H"/>
+                    <TextBlock x:Name="standingTblk" HorizontalAlignment="Left" Margin="501,204,0,0" TextWrapping="Wrap" Text="Standing" VerticalAlignment="Top" FontSize="20" FontFamily="Kozuka Gothic Pro H"/>
+                    <TextBlock x:Name="standingTbx" HorizontalAlignment="Left" Margin="504,272,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="37" FontSize="20"/>
+                    <Image x:Name="image" HorizontalAlignment="Left" Height="52" Margin="682,330,0,0" VerticalAlignment="Top" Width="100"   Source="/images/nbalogo.jpg"/>
+
+                </Grid>
+            </TabItem>
+
+            <TabItem Header="NBA Games" Width="75">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="23*"/>
+                        <ColumnDefinition Width="370*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="2*" />
+                        <RowDefinition Height="8*" />
+                    </Grid.RowDefinitions>
+                    <ListBox Grid.Row="1" Name="gameslbdisplay" Grid.ColumnSpan="2" >
+                        <DataGrid x:Name="gamesdvgDisplay" Height="280" Width="776"/>
+                    </ListBox>
+                </Grid>
+            </TabItem>
+        </TabControl>
     </Grid>
 </Window>
+
+
+
+
+
