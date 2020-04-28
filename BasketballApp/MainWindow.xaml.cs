@@ -36,13 +36,13 @@ namespace BasketballApp
 
 
             //create teams
-            BasketballTeam firstteam = new BasketballTeam("Houston Rockets", "Russell Westbrook , James Harden", 5, Conference.Western, "rockets.png");
-            BasketballTeam secondteam = new BasketballTeam("Los Angeles Lakers", "Lebron James , Anthony Davis", 1, Conference.Western, "lakers.png" );
-            BasketballTeam thirdteam = new BasketballTeam("Boston Celtics", "Jayson Tatum , Kemba Walker", 3, Conference.Eastern, "celtics.png");
-            BasketballTeam fourthteam = new BasketballTeam("Detroit Pistons", "Blake Griffin , Derrick Rose", 9, Conference.Eastern, "pistons.png");
-
-           
-;
+            BasketballTeam firstteam = new BasketballTeam("Houston Rockets -", "Russell Westbrook , James Harden", 5, Conference.Western, "rockets.png");
+            BasketballTeam secondteam = new BasketballTeam("Los Angeles Lakers - ", "Lebron James , Anthony Davis", 1, Conference.Western, "lakers.png" );
+            BasketballTeam thirdteam = new BasketballTeam("Boston Celtics - ", "Jayson Tatum , Kemba Walker", 3, Conference.Eastern, "celtics.png");
+            BasketballTeam fourthteam = new BasketballTeam("Detroit Pistons -", "Blake Griffin , Derrick Rose", 9, Conference.Eastern, "pistons.png");
+            BasketballTeam fifthteam = new BasketballTeam("Golden State Warriors -", "Stephen Curry , Klay Thompson", 10, Conference.Western, "warriors.png");
+            BasketballTeam sixthteam = new BasketballTeam("Miami Heat -", "Jimmy Butler , Hassan Whiteside", 7, Conference.Eastern, "heat.png");
+            ;
 
 
 
@@ -51,8 +51,8 @@ namespace BasketballApp
             allTeams.Add(secondteam);
             allTeams.Add(thirdteam);
             allTeams.Add(fourthteam);
-
-
+            allTeams.Add(fifthteam);
+            allTeams.Add(sixthteam);
 
 
 
@@ -108,11 +108,11 @@ namespace BasketballApp
         //private Random gen = new Random();
         //DateTime RandomDay()
         //{
-        //        DateTime start = new DateTime(1995, 1, 1);
-        //        int range = (DateTime.Today - start).Days;
-        //        return start.AddDays(gen.Next(range));
-        //  }
+        //    DateTime start = new DateTime(1995, 1, 1);
+        //    int range = (DateTime.Today - start).Days;
+        //    return start.AddDays(gen.Next(range));
+        //}
 
-      
+
     }
 }

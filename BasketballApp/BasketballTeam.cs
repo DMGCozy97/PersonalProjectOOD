@@ -37,7 +37,7 @@ namespace BasketballApp
         //METHODS
         public override string ToString()
         {
-            return string.Format(TeamName + " " + Players + " " + Standing + " " + TeamImage);
+            return string.Format(TeamName + " " + Players );
         }
 
         public int CompareTo(BasketballTeam other)
