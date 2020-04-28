@@ -40,7 +40,7 @@
                     <TextBlock x:Name="gamesTblk" HorizontalAlignment="Left" Margin="0,40,0,0" TextWrapping="Wrap" Text="Game Dates" VerticalAlignment="Top" FontSize="14" FontFamily="Kozuka Gothic Pro H" Width="163" Grid.Column="1"/>
 
                     <ListBox Grid.Row="1" Name="gameslbdisplay" Grid.ColumnSpan="2" >
-                        <DataGrid x:Name="gamesdvgDisplay" Height="224" Width="364"/>
+                        <!--<DataGrid x:Name="gamesdvgDisplay" Height="224" Width="364"/>-->
                     </ListBox>
 
                     <Image x:Name="image12" HorizontalAlignment="Left" Height="52" Margin="630,251,0,0" VerticalAlignment="Top" Width="100"   Source="/images/nbalogo.jpg" Grid.Column="1" Grid.Row="1"/>

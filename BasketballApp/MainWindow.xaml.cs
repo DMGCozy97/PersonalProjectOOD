@@ -37,7 +37,7 @@ namespace BasketballApp
 
             //create teams
             BasketballTeam firstteam = new BasketballTeam("Houston Rockets -", "Russell Westbrook , James Harden", 5, Conference.Western, "rockets.png");
-            BasketballTeam secondteam = new BasketballTeam("Los Angeles Lakers - ", "Lebron James , Anthony Davis", 1, Conference.Western, "lakers.png" );
+            BasketballTeam secondteam = new BasketballTeam("Los Angeles Lakers - ", "Lebron James , Anthony Davis", 1, Conference.Western, "lakers.png");
             BasketballTeam thirdteam = new BasketballTeam("Boston Celtics - ", "Jayson Tatum , Kemba Walker", 3, Conference.Eastern, "celtics.png");
             BasketballTeam fourthteam = new BasketballTeam("Detroit Pistons -", "Blake Griffin , Derrick Rose", 9, Conference.Eastern, "pistons.png");
             BasketballTeam fifthteam = new BasketballTeam("Golden State Warriors -", "Stephen Curry , Klay Thompson", 10, Conference.Western, "warriors.png");
@@ -61,6 +61,9 @@ namespace BasketballApp
 
             allTeams.Sort();
 
+            //populate fixtures
+            gameslbdisplay.ItemsSource = GetFixture();
+
         }
 
         //responds to changes to combo box
@@ -76,7 +79,7 @@ namespace BasketballApp
             {
                 //take action
                 if (selected.Equals("Eastern"))
-                Teamslbx.ItemsSource = allTeams.Where(t => t.Conference.Equals(Conference.Eastern));
+                    Teamslbx.ItemsSource = allTeams.Where(t => t.Conference.Equals(Conference.Eastern));
                 else
                     Teamslbx.ItemsSource = allTeams.Where(t => t.Conference.Equals(Conference.Western));
 
@@ -85,7 +88,7 @@ namespace BasketballApp
 
 
 
-           /* imgLogo.Source = new BitmapImage(new Uri());*///may not need the ../../
+            /* imgLogo.Source = new BitmapImage(new Uri());*///may not need the ../../
 
         }
 
@@ -96,23 +99,71 @@ namespace BasketballApp
             if (selected != null)
             {
                 //take action
-                
+
                 standingTbx.Text = selected.Standing.ToString();
                 var uri = new Uri("pack://application:,,,/images/" + selected.TeamImage);
-                imgLogo.Source = new BitmapImage(uri);   
+                imgLogo.Source = new BitmapImage(uri);
             }
         }
 
 
 
-        //private Random gen = new Random();
-        //DateTime RandomDay()
-        //{
-        //    DateTime start = new DateTime(1995, 1, 1);
-        //    int range = (DateTime.Today - start).Days;
-        //    return start.AddDays(gen.Next(range));
-        //}
+        private string[] GetFixture()
+        {
+            //string s1 = "lakers vs bulls may 25th";
+            //string s2 = "lakers vs raptors may 26th";
 
 
+            string[] teams = new string[] { "lakers", "bulls", "raptors", "aaaa", "bbb" };
+
+            string[] fixtures = new string[10];
+
+            Random gen = new Random();
+
+
+
+            string fixture;
+
+            for (int i = 0; i< 10; i++)
+            {
+                string team1 = teams[gen.Next(0, 3)];
+                string team2 = teams[gen.Next(0, 3)];
+
+
+                if (team1.Equals(team2))
+                {
+                    //need new team
+                    do
+                    {
+                        team2 = teams[gen.Next(0, 3)];
+                    } while (team1.Equals(team2));
+                }
+
+
+                DateTime fixtureDate = DateTime.Now.AddDays(gen.Next(30));
+
+                fixture = $"{team1} vs {team2} {fixtureDate.ToShortDateString()}";
+
+                fixtures[i] = fixture;
+
+
+
+            }
+
+
+            return fixtures;
+
+        }
+
+
+    private Random gen = new Random();
+    DateTime RandomDay()
+    {
+        DateTime start = new DateTime(1995, 1, 1);
+        int range = (DateTime.Today - start).Days;
+        return start.AddDays(gen.Next(range));
     }
+
+
+}
 }
