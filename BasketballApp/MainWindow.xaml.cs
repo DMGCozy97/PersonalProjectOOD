@@ -42,7 +42,12 @@ namespace BasketballApp
             BasketballTeam fourthteam = new BasketballTeam("Detroit Pistons -", "Blake Griffin , Derrick Rose", 9, Conference.Eastern, "pistons.png");
             BasketballTeam fifthteam = new BasketballTeam("Golden State Warriors -", "Stephen Curry , Klay Thompson", 10, Conference.Western, "warriors.png");
             BasketballTeam sixthteam = new BasketballTeam("Miami Heat -", "Jimmy Butler , Hassan Whiteside", 7, Conference.Eastern, "heat.png");
-            ;
+            BasketballTeam seventhteam = new BasketballTeam("Los Angeles Clippers -", "Kawhi Leonard , Paul George", 2, Conference.Western, "clippers.png");
+            BasketballTeam eigthteam = new BasketballTeam("Philadelphia 76ers -", "Joel Embiid , Ben Simmons",4 , Conference.Eastern, "76ers.png");
+            BasketballTeam ninthteam = new BasketballTeam("Milwaukee Bucks -", "Giannis Antetokoumpo , Khris Middleton", 6, Conference.Eastern, "bucks.jpg");
+            BasketballTeam tenthteam = new BasketballTeam("Utah Jazz -", "Donovan Mitchell , Rudy Gobert", 8, Conference.Western, "jazz.png");
+            
+
 
 
 
@@ -53,7 +58,10 @@ namespace BasketballApp
             allTeams.Add(fourthteam);
             allTeams.Add(fifthteam);
             allTeams.Add(sixthteam);
-
+            allTeams.Add(seventhteam);
+            allTeams.Add(eigthteam);
+            allTeams.Add(ninthteam);
+            allTeams.Add(tenthteam);
 
 
             //source 
@@ -114,7 +122,7 @@ namespace BasketballApp
             //string s2 = "lakers vs raptors may 26th";
 
 
-            string[] teams = new string[] { "lakers", "bulls", "raptors", "aaaa", "bbb" };
+            string[] teams = new string[] { "Lakers", "Bucks", "Jazz", "Rockets", "Clippers", "76ers", "Heat", "Warriors", "Celtics", "Pistons" };
 
             string[] fixtures = new string[10];
 
@@ -126,8 +134,8 @@ namespace BasketballApp
 
             for (int i = 0; i< 10; i++)
             {
-                string team1 = teams[gen.Next(0, 3)];
-                string team2 = teams[gen.Next(0, 3)];
+                string team1 = teams[gen.Next(0, 10)];
+                string team2 = teams[gen.Next(0, 10)];
 
 
                 if (team1.Equals(team2))
