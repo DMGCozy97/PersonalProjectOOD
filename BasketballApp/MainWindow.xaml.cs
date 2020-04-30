@@ -176,13 +176,13 @@ namespace BasketballApp
         private void awardslbdisplay_Loaded(object sender, RoutedEventArgs e)
         {
             BasketballTeam mvp1 = new BasketballTeam("Lebron James ", "29 points per game", "/images/mvp.png");
-            BasketballTeam mvp2 = new BasketballTeam("James Harden ", "32 points per game", "/images/james.png");
+            //BasketballTeam mvp2 = new BasketballTeam("James Harden ", "32 points per game", "/images/james.png");
             //BasketballTeam mvp3 = new BasketballTeam("Russell Westbrook ", "23 points per game", "/images/russ.png");
             //BasketballTeam mvp4 = new BasketballTeam("Michael Jordan ", "43 points per game", "/images/mike.png");
             //BasketballTeam mvp5 = new BasketballTeam("Shaquille O'Neal ", "30 points per game", "/images/shaq.png");
 
             Awards.Add(mvp1);
-            Awards.Add(mvp2);
+            //Awards.Add(mvp2);
             //Awards.Add(mvp3);
             //Awards.Add(mvp4);
             //Awards.Add(mvp5);
