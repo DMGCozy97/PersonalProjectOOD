@@ -6,6 +6,19 @@
         xmlns:local="clr-namespace:BasketballApp"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+    <Window.Resources>
+        <DataTemplate x:Key="ListboxTemplate">
+
+            <StackPanel Orientation="Horizontal" Margin="5">
+                <Image Source="{Binding MVPImage}" Width="75"/>
+                <StackPanel>
+                    <TextBlock Text="{Binding MVP}" Margin="5" FontSize="12"/>
+                    <TextBlock Text="{Binding PPG}" Margin="5" FontSize="12"/>
+                </StackPanel>
+            </StackPanel>
+            
+        </DataTemplate>
+    </Window.Resources>
     <Grid>
 
         <TabControl TabStripPlacement="Top">
@@ -48,6 +61,27 @@
                 </Grid>
             </TabItem>
 
+            <TabItem Header="Dream Team" Width="75">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="23*"/>
+                        <ColumnDefinition Width="370*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="2*" />
+                        <RowDefinition Height="8*" />
+                    </Grid.RowDefinitions>
+
+                    <TextBlock x:Name="awardsTblk" HorizontalAlignment="Left" Margin="0,40,0,0" TextWrapping="Wrap" Text="My Favourite Players" VerticalAlignment="Top" FontSize="14" FontFamily="Kozuka Gothic Pro H" Width="163" Grid.Column="1"/>
+
+                    <ListBox Grid.Row="1" Name="awardslbdisplay" Grid.ColumnSpan="2" Loaded="awardslbdisplay_Loaded" ItemTemplate="{StaticResource ListboxTemplate}" />
+
+
+
+                    <Image x:Name="image123" HorizontalAlignment="Left" Height="52" Margin="630,251,0,0" VerticalAlignment="Top" Width="100"   Source="/images/nbalogo.jpg" Grid.Column="1" Grid.Row="1"/>
+
+                </Grid>
+            </TabItem>
         </TabControl>
     </Grid>
 </Window>

@@ -18,12 +18,22 @@ namespace BasketballApp
         public string Players { get; set; }
         public int Standing { get; set; }
         public Conference Conference { get; set; }
+        public string MVP { get; set; }
+        public string PPG { get; set; }
+        public string MVPImage { get; set; }
 
         public DateTime GameDay { get; set; }
 
         public string TeamImage { get; set; }
 
         //constructors
+        public BasketballTeam(string mvp, string ppg, string mvpImage)
+        {
+            MVP = mvp;
+            PPG = ppg;
+            MVPImage = mvpImage;
+        }
+
         public BasketballTeam(string teamName, string players, int standing, Conference conference , string teamImage)
         {
             TeamName = teamName;
